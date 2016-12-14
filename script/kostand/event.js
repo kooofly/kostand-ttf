@@ -35,9 +35,9 @@ function weave(when, methodName, context, callback, priority) {
     var name, method
     var on = event.on
     while ( name = names.shift() ) {
-        method = getMethod( context || window, name )
+        method = getMethod( context || this, name )
         if ( !method.__isAspected ) {
-            wrap.call( context || window, name, context )
+            wrap.call( context || this, name, context )
         }
         on.call( this, when + ':' + name, context, callback, priority )
     }

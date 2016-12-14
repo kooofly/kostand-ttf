@@ -52,8 +52,8 @@ require("./assets/linkage")
 require("./assets/zclip")
 require("./assets/dialogselector")*/
 
-/*var _ = require('lodash')
+var _ = require('lodash')
 var ev = require('./script/kostand/event')
 window._ = _
-window.ev = ev*/
+window.ev = ev
 require('./css/theme.scss')
