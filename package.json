@@ -1,0 +1,42 @@
+{
+  "name": "Kostand",
+  "project": "kostand",
+  "version": "2.0.0",
+  "description": "web project standard generator",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --inline --hot --quiet --port 8091",
+    "build": "rm dist -r && mkdir dist && cross-env NODE_ENV=production webpack -p",
+    "build2": "rm dist -r && mkdir dist && cross-env NODE_ENV=production webpack -p && cp -rf ./dist/* ../PC有村村站平台改版/ycsp-web/src/main/webapp/assets/kostand",
+    "ob": "cross-env NODE_ENV=production webpack -p",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cp": "cp -rf ./dist/* ../PC有村村站平台改版/ycsp-web/src/main/webapp/assets/kostand"
+  },
+  "author": "kooofly",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "handlebars": "^4.0.5",
+    "jquery": "^1.12.4",
+    "jquery-validation": "^1.15.1",
+    "lodash": "^4.17.2"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^1.12.0",
+    "cross-env": "^1.0.5",
+    "css-loader": "^0.24.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "node-sass": "^3.13.1",
+    "sass-loader": "^4.0.0",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kooofly/kostand.git"
+  }
+}

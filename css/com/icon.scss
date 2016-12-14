@@ -1,0 +1,22 @@
+// iconfont kostand  iconfont.cn
+.icon {
+  font-family:"iconfont" !important;
+  position: relative;
+  display: inline-block;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  } }
+.icon-rotate:before {     transition: all .3s ease;
+  animation: rotate 2s 0s linear infinite;
+  display: block; }

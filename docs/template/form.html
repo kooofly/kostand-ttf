@@ -1,0 +1,194 @@
+<section id="form" class="demo">
+    <h1 class="title">
+        <span>表单</span>
+        <span class="sub">Form</span>
+    </h1>
+    <div class="body">
+        <div class="panel">
+            <div class="panel-body">
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label"><i class="text-danger">*</i>商品类型：</label>
+                        <div class="col-sm-5">
+                            <select name="" class="form-control">
+                                <option value="">请选择类目</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-5">
+                            <select class="form-control">
+                                <option value="">请选择二级类目</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">商品标题：</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">多选：</label>
+                        <div class="col-sm-10">
+                            <label class="checkbox-inline">
+                                <input type="checkbox" name="optionsCheckbox" value="" checked="">
+                                选项一
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" name="optionsCheckbox" value="">
+                                选项二
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">单选：</label>
+                        <div class="col-sm-10">
+                            <label class="radio-inline">
+                                <input type="radio" name="optionsRadios" value="" checked>
+                                选项一
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="optionsRadios" value="">
+                                选项二
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group has-error">
+                        <label class="col-sm-2 control-label">错误验证：</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" placeholder="">
+                            <p class="help-block"><i class="icon icon-error2"></i>错误提示信息</p>
+                        </div>
+                    </div>
+                    <div class="form-group has-feedback">
+                        <label class="col-sm-2 control-label">日期区间：</label>
+                        <div class="col-sm-7">
+                            <div class="input-group input-range">
+                                <div class="pr">
+                                    <input id="startDate" type="text" class="form-control" name="start" onfocus="WdatePicker({maxDate:'#F{$dp.$D(\'endDate\')}'})" placeholder="开始时间">
+                                    <span class="icon icon-calendar form-control-feedback"></span>
+                                </div>
+                                <span class="input-group-addon">-</span>
+                                <input id="endDate" type="text" class="form-control" name="end" onfocus="WdatePicker({minDate:'#F{$dp.$D(\'startDate\')}',maxDate:'2020-10-01'})" placeholder="结束时间">
+                                <span class="icon icon-calendar form-control-feedback"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group has-feedback">
+                        <label class="col-sm-2 control-label">日期：</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" onfocus="WdatePicker()" placeholder="">
+                            <span class="icon icon-calendar form-control-feedback"></span>
+                        </div>
+                    </div>
+                    <div class="form-group has-feedback">
+                        <label class="col-sm-2 control-label">混排：</label>
+                        <div class="col-sm-3">
+                            <div class="input-group">
+                                  <input type="text" class="form-control">
+                                  <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button">搜索</button>
+                                  </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group has-feedback">
+                        <label class="col-sm-2 control-label">混排：</label>
+                        <div class="col-sm-3">
+                            <div class="input-group">
+                                <div class="pr">
+                                    <input type="text" class="form-control">
+                                    <span class="form-control-feedback">元</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <a href="javascript:;" class="btn btn-link">一个操作</a>
+                        </div>
+                    </div>
+
+                    <div class="form-group has-feedback">
+                        <label class="col-sm-2 control-label">混排：</label>
+                        <div class="col-sm-3">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="icon icon-search"></i></span>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">&nbsp;</label>
+                        <div class="col-sm-7">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox"> 同意协议
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">固宽输入框：</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control input-1" placeholder="60">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">固宽输入框：</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control input-2" placeholder="120">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">固宽输入框：</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control input-3" placeholder="180">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">固宽输入框：</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control input-4" placeholder="240">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">固宽输入框：</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control input-5" placeholder="300">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">固宽输入框：</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control input-6" placeholder="360">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Textarea：</label>
+                        <div class="col-sm-10">
+                            <textarea class="form-control" cols="30" rows="10"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="offset col-sm-10">
+                            <span><button type="submit" class="btn btn-hole">Sign in</button></span>
+                        </div>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="../../script/thirdpart/My97DatePicker/WdatePicker.js"></script>
+<script>
+    $(function () {
+        $(document).trigger('rCopy', '#form .form-group')
+    })
+</script>
