@@ -542,9 +542,9 @@ input[type="checkbox"] {
   }
 }
 // [converter] extracted as `@mixin form-inline` for libsass compatibility
-.form-inline {
+/*.form-inline {
   @include form-inline;
-}
+}*/
 
 
 
@@ -624,11 +624,12 @@ input[type="checkbox"] {
 // webpack:///css/~/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss
 
 .form-horizontal{
-  margin: 5px -15px 5px 0;
   .control-label{ width: 120px; font-weight: 400; padding-left: 0; padding-right: 0; }
   .offset{ margin-left: 120px; }
   .has-feedback .input-group .form-control-feedback{ right: 0; }
   .form-group {
+    margin-left: 0;
+    margin-right: 0;
     min-height: 30px;
   }
 }
@@ -637,6 +638,8 @@ input[type="checkbox"] {
 .form {
   .form-group {
     @include make-row;
+    margin-left: 0;
+    margin-right: 0;
     min-height: 30px;
   }
   .control-label{

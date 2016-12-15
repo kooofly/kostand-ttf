@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_1474703616_6625042.css"/>
     <link rel="stylesheet" href="./dist/kostand.css"/>
     <style type="text/css">
-        .ie8 .btn{ position: relative; behavior: url(./css/pie.htc); }
+        .ie8 .btn,
+        .ie8 .panel .panel-heading .decorate{ position: relative; behavior: url(./css/pie.htc); }
     </style>
     <link rel="stylesheet" href="./docs/docs.css"/>
     <!--[if lt IE 9]>
@@ -30,12 +31,14 @@
             <li><a href="#color">色彩</a></li>
             <li><a href="#margin">间距</a></li>
             <li><a href="#font">字体</a></li>
+            <li><a href="#panel">面板</a></li>
             <li><a href="#button">按钮</a></li>
             <li><a href="#form">表单</a></li>
             <li><a href="#table">表格</a></li>
+            <li><a href="#modal">模态框</a></li>
             <li><a href="#layout">布局</a></li>
-            <!--<li><a href="#modal">模态框</a></li>
-            <li><a href="#uploader">上传控件</a></li>
+
+            <!--<li><a href="#uploader">上传控件</a></li>
             <li><a href="#qr">二维码</a></li>
             <li><a href="#search">搜索/状态</a></li>
             <li><a href="#pagination">分页</a></li>
@@ -75,17 +78,19 @@
                 规范这东西，由少变多很简单；由多变少，呵呵，还是等下一个项目吧。谨慎的添加每一行规范，要不然就让那该死的（样式）变成一只特立独行的猪吧。
                 <div class="text-right">- Matias Duarte</div>
             </div>-->
-
             <div class="wrap" data-url="./docs/template/color.html"></div>
+            <div class="wrap" data-url="./docs/template/new.html"></div>
             <div class="wrap" data-url="./docs/template/margin.html"></div>
             <div class="wrap" data-url="./docs/template/font.html"></div>
+            <div class="wrap" data-url="./docs/template/panel.html"></div>
             <div class="wrap" data-url="./docs/template/button.html"></div>
             <div class="wrap" data-url="./docs/template/form.html"></div>
             <div class="wrap" data-url="./docs/template/table.html"></div>
-            <!--<div class="wrap demo" data-url="./docs/template/layout.html"></div>
-
             <div class="wrap" data-url="./docs/template/modal.html"></div>
-            <div class="wrap" data-url="./docs/template/form.html"></div>
+            <div class="wrap demo" data-url="./docs/template/layout.html"></div>
+
+
+            <!--<div class="wrap" data-url="./docs/template/form.html"></div>
 
             <div class="wrap" data-url="./docs/template/qr.html"></div>
 
@@ -140,6 +145,7 @@
         </div>
     </div>
 </div>
+
 <script src="./script/jquery.js"></script>
 <!--https://github.com/jamesallardice/Placeholders.js/-->
 <!--Placeholders 会导致ie取值问题-->

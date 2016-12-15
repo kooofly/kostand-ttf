@@ -28,8 +28,12 @@ i{ font-style: normal }
 //
 // font-size
 // --------------------------------------------------
+.font12{ font-size: 12px !important; }
+.font14{ font-size: 14px !important; }
 .font-lg, h1.title{ font-size: $font-size-base; }
-.font-sm, .sub { font-size: $font-size-small; color: $gray-light; }
+.font-sm,
+.sub,
+.text-sub{ font-size: $font-size-small; color: $gray-light; }
 .sub { margin-top: 4px; }
 //
 // no-border
@@ -85,6 +89,8 @@ i{ font-style: normal }
 //
 // padding
 // --------------------------------------------------
+.p0 { padding: 0 !important; }
+.p10 { padding: 10px !important; }
 .pt0 { padding-top: 0 !important; }
 .pl10 { padding-left: 10px; }
 .pl15 { padding-left: 15px; }

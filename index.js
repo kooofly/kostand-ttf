@@ -54,6 +54,9 @@ require("./assets/dialogselector")*/
 
 var _ = require('lodash')
 var ev = require('./script/kostand/event')
+var Page = require('./script/kostand/page')
+var Form = require('./script/kostand/form')
 window._ = _
 window.ev = ev
+
 require('./css/theme.scss')

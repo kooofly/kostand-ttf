@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="./script/thirdpart/layer/skin/default/layer.css"/>
+<section id="modal" class="demo">
+    <h1 class="title">
+        <span>模态框</span>
+        <span class="sub">Modal</span>
+    </h1>
+    <div class="body">
+        <div class="panel">
+            <div class="panel-body">
+                <div class="action-wrapper">
+                    <span><button id="layer1" class="btn btn-primary">确认框</button></span>
+                    <span><button id="layer2" class="btn btn-hole">提示信息</button></span>
+                    <span><button id="layer3" class="btn btn-hole">页面层</button></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="./script/thirdpart/layer/layer.js"></script>
+<script>
+    $(function () {
+        $('#layer1').on('click', function () {
+            //确认框
+            layer.confirm('<span>您是如何看待前端开发？</span>', {
+                btn: ['重要','奇葩'] //按钮
+            }, function(){
+                layer.msg('的确很重要', {icon: 1});
+            }, function(){
+                layer.msg('也可以这样', {
+                    time: 2000, //2s后自动关闭
+                    btn: ['明白了', '知道了']
+                });
+            });
+        })
+        $('#layer2').on('click', function () {
+            // 提示信息
+            layer.alert('内容')
+        })
+
+        $('#layer3').on('click', function () {
+            //页面层
+            layer.open({
+                type: 1,
+                skin: 'layui-layer-rim', //加上边框
+                area: ['420px', '240px'], //宽高
+                content: 'html内容'
+            });
+        })
+
+    })
+</script>
