@@ -684,6 +684,7 @@ input[type="checkbox"] {
 .btn-group .btn{ line-height: 1.2; }
 
 .has-error .input-group-addon{ border: 0; background: none; vertical-align: top; }
+.input-group-addon:last-child{ border-right: 1px solid $color-border-input; }
 .input-group .btn{ border-radius: 0; }
 .ie8 .input-group .btn,
 .ie9 .input-group .btn { line-height: 1.28; }
