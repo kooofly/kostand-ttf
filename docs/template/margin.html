@@ -1,6 +1,3 @@
-<style type="text/css">
-    #margin .margin:after{ content: attr(data-margin) }
-</style>
 <div id="margin" class="komod">
     <h1 class="title">Margin 间距</h1>
     <section class="ui">
@@ -13,9 +10,9 @@
             <tr>
                 <td>栅格系统</td>
                 <td>
-                    列间距 <code data-id="grid" class="margin"></code> <span class="sub">@variables.scss - Grid system</span>
-                    ，普通行间距 <code data-id="gridrow" class="margin"></code>
-                    ，大行间距<code data-id="gridrowlg" class="margin"></code> <span class="sub">@utilities.scss - Grid system</span>
+                    列间距 <code data-id="grid" data-role="margin"></code> <span class="sub">@variables.scss - Grid system</span>
+                    ，普通行间距 <code data-id="gridrow" data-role="margin"></code>
+                    ，大行间距<code data-id="gridrowlg" data-role="margin"></code> <span class="sub">@utilities.scss - Grid system</span>
                 </td>
             </tr>
             <!--<tr>
@@ -28,7 +25,7 @@
             </tr>-->
             <tr>
                 <td>form</td>
-                <td>纵向：<code data-id="form" class="margin"></code>，横向：<code data-id="grid" class="margin"></code>（同栅格系统间距）</td>
+                <td>纵向：<code data-id="form" data-role="margin"></code>，横向：<code data-id="grid" data-role="margin"></code>（同栅格系统间距）</td>
             </tr>
         </table>
         <div class="sub">注：其他间距见相应组件样式</div>
@@ -91,7 +88,7 @@
             $el.remove()
             return result
         })()
-        $('#margin .margin').each(function () {
+        $('#margin [data-role=margin]').each(function () {
             var result
             var id = $(this).data('id')
             switch (id) {
@@ -117,7 +114,7 @@
                     result = form;
                     break;
             }
-            $(this).attr('data-margin', typeof result === 'number' ? result + 'px' : result)
+            $(this).text(typeof result === 'number' ? result + 'px' : result)
         })
     })
 </script>

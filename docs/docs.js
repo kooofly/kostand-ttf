@@ -1,3 +1,24 @@
+// ie8 不支持indexOf
+if (!Array.prototype.indexOf) {
+    Array.prototype.indexOf = function(elt /*, from*/)
+    {
+        var len = this.length >>> 0;
+        var from = Number(arguments[1]) || 0;
+        from = (from < 0)
+            ? Math.ceil(from)
+            : Math.floor(from);
+        if (from < 0)
+            from += len;
+        for (; from < len; from++)
+        {
+            if (from in this &&
+                this[from] === elt)
+                return from;
+        }
+        return -1;
+    };
+}
+
 function mark (element, markArray) {
 
     /* TODO 需要展示的属性 */
@@ -203,22 +224,23 @@ $(function () {
     $('.wrap').each(function () {
         $(this).load($(this).data('url'), function () {
             mark($(this).find('[data-role=mark]'))
+
+            $('[data-role="select2"]').select2({
+                minimumResultsForSearch: Infinity,
+                templateResult: function (state, i) {
+                    var $state;
+                    if (!state.id) { return state.text; }
+                    if (state.element.index % 2) {
+                        $state = $('<span class="even">' + state.text + '</span>');
+                    } else {
+                        $state = $('<span class="odd">' + state.text + '</span>');
+                    }
+
+                    return $state;
+
+                }
+            })
+
         })
     })
-
-    
-
-    /*{{#each this}}
-    1111111111111111111 <br>
-    {{detailList.length}}
-    {{#each detailList}}
-
-    {{\#if @index}}
-    1 <br>
-    {{else}}
-    0 <br>
-    {{/if}}
-    {{/each}}
-    111111111111111111
-    {{/each}}*/
 })

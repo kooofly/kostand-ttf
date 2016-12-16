@@ -684,3 +684,19 @@ input[type="checkbox"] {
 .btn-group .btn{ line-height: 1.2; }
 
 .has-error .input-group-addon{ border: 0; background: none; vertical-align: top; }
+.input-group .btn{ border-radius: 0; }
+.ie8 .input-group .btn,
+.ie9 .input-group .btn { line-height: 1.28; }
+.select2-container--default .select2-selection--single{ border: 1px solid #d7d7d7; border-radius: 0; height: 30px; }
+.select2-dropdown{ border-radius: 0; }
+.select2-container--default .select2-results__option[aria-selected=true]{background: #fff;color: #333;}
+.select2-results__option{ padding: 0; }
+.select2-container--default .select2-results__option--highlighted[aria-selected]{background: #ededed;color: #333;}
+.select2-container--default .select2-selection--single .select2-selection__arrow{ height: 28px; border-left: 1px solid #d7d7d7; width: 28px; }
+.select2-container .select2-selection--single .select2-selection__rendered{padding-left: 8px; padding-right: 29px;}
+/*.select2-container--default .select2-selection--single .select2-selection__arrow b{ display: none; }
+.select2-container--default .select2-selection--single .select2-selection__arrow{ background: url('../../images/icon-down.png') no-repeat center center; }*/
+.select2-container--default .odd,
+.select2-container--default .even{ padding: 6px; display: block; }
+.select2-container--default .odd{ background-color: #f9f9f9; border-top: 1px solid #d7d7d7; border-bottom: 1px solid #d7d7d7; }
+.select2-container--default .select2-results__option--highlighted[aria-selected] .odd{background: #ededed;}

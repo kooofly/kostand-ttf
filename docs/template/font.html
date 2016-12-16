@@ -36,10 +36,10 @@
 </div>
 <script>
     $(function () {
-        $('.font').each(function () {
+        $('#font .font').each(function () {
             var fontSize = $(this).css('fontSize')
             var fontStyle = $(this).css('fontWeight')
-            $(this).attr('data-font', fontSize + '，' + fontStyle)
+            $(this).after('<div>' + fontSize + '，' + fontStyle + '</div>')
         })
     })
 </script>
