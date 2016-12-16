@@ -1,4 +1,51 @@
 body{ font-family: "Microsoft YaHei", sans-serif; font-size:12px; }
+.diver{ display: inline-block; margin: 0 8px; color: #666; }
+.container { width: 1000px!important; padding: 0; }
+.header .container { position: relative; }
+.header .right{ position: absolute; display: inline-block; right: 0; bottom: 14px; font-size: 0; }
+.header .right * { font-size: 12px; }
+.header .right a{ color: #666; }
+.header .logo{ display: inline-block; margin: 14px 0; }
+
+.nav{ background: $color-bg-nav; line-height: 1; }
+.nav .container { margin-bottom: 0; font-size: 0; }
+.nav .container li{ position: relative; display: inline-block; margin-right: 4px; }
+.nav .container li a{ font-size: 14px; display: inline-block; padding: 9px 10px; color: #fff; }
+.nav .container li:hover a { text-decoration: none; background: $color-bg-nav-hover; }
+.nav .container li.active a{ background: $color-bg-nav-hover; }
+.nav .container li .children{
+  position: absolute;
+  left: 0; top: 32px;
+  width: auto;
+  padding: 0;
+  display: none;
+  font-size: 14px;
+  background: $color-bg-nav-hover; }
+
+.nav .container li:hover .children{ display: block; }
+.nav .container li .children a{ white-space: pre; }
+.nav .container li .children li { margin: 0; }
+.nav .container li .children a:hover{ background: $color-bg-nav; }
+
+.aside,
+.main{ float: left; }
+.aside{ width: 180px; margin-top: 20px; }
+.aside .affix{ top: 20px; }
+.aside .inner{ width: 180px; border: #dfdfdf 1px solid; background: #f9fbfc; padding-bottom: 10px; }
+.aside .inner a{ display: block; padding: 10px; font-size: 14px; text-decoration: none; color: #666; border-bottom: #efefef 1px solid; }
+.aside .inner a:hover,
+.aside .inner .active{ background: #1b8dff; color: #fff; }
+.aside .inner a:before{ display: inline-block; overflow: hidden; content: ''; border: 4px dashed transparent; border-left: 4px solid #666; width: 0; height: 0; line-height: 0; margin-right: 10px; vertical-align: 1px; }
+.aside .inner a:hover:before,
+.aside .inner .active:before{ border-left-color: #fff; }
+.main{ width: 800px; margin-top: 20px; margin-left: 20px; }
+.main .panel-main { margin-bottom: 0; }
+.main .panel-main .panel-body{ min-height: 800px; }
+.footer{ margin-top: 20px; background: #f3f3f3; border-top: #dedede 1px solid; text-align: center; }
+.footer .container{ padding: 20px 0; background: #f3f3f3; border-top: #dedede 1px solid; margin-top: -1px; }
+.footer .links{ font-size: 0; margin-bottom: 10px; }
+.footer .links * { font-size: 12px; color: #666; }
+
 /*.container{ background: #f1f2f5; width: 1160px; }
 .header{ background: #fff; box-shadow: 0 2px 3px -3px $gray-dark; line-height: 20px; }
 .header .nav a{ padding: 13px 15px; color: $gray-dark; border-radius: 0; }
