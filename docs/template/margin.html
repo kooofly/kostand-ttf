@@ -1,50 +1,39 @@
 <style type="text/css">
     #margin .margin:after{ content: attr(data-margin) }
 </style>
-<section id="margin" class="demo">
-    <h1 class="title">
-        <span>间距</span>
-        <span class="sub">Margin</span>
-    </h1>
-    <div class="body">
-        <div class="panel">
-            <div class="panel-body">
-                <p>间距统一可以让页面像搭积木一样快速搭建，有利于组件化动态页面的开发</p>
-                <table class="table table-bordered table-hover">
-                    <tr>
-                        <th width="120">定义</th>
-                        <th width="150">值</th>
-                    </tr>
-                    <tr>
-                        <td>栅格系统</td>
-                        <td>
-                            列间距 <code data-id="grid" class="margin"></code> <span class="sub">@variables.scss - Grid system</span>
-                            ，普通行间距 <code data-id="gridrow" class="margin"></code>
-                            ，大行间距<code data-id="gridrowlg" class="margin"></code> <span class="sub">@utilities.scss - Grid system</span>
-                        </td>
-                    </tr>
-                    <!--<tr>
-                        <td>media</td>
-                        <td>纵向：<code data-id="media-h-v" class="margin"></code>，内容：<code data-id="media-c-v" class="margin"></code></td>
-                    </tr>
-                    <tr>
-                        <td>com <span class="sub">组件间距</span></td>
-                        <td>纵向：<code data-id="com" class="margin"></code> <span class="sub">@kostand.scss - Com</span>，横向：<code data-id="grid" class=" margin"></code>（同栅格系统间距）</td>
-                    </tr>-->
-                    <tr>
-                        <td>form</td>
-                        <td>纵向：<code data-id="form" class="margin"></code>，横向：<code data-id="grid" class="margin"></code>（同栅格系统间距）</td>
-                    </tr>
-                </table>
-                <div class="sub">注：其他间距见相应组件样式</div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--
-<div class="com">com1</div>
-<div class="com">com2</div>
--->
+<div id="margin" class="komod">
+    <h1 class="title">Margin 间距</h1>
+    <section class="ui">
+        <p>间距统一可以让页面像搭积木一样快速搭建，有利于组件化动态页面的开发</p>
+        <table class="table table-bordered table-hover">
+            <tr>
+                <th width="120">定义</th>
+                <th width="150">值</th>
+            </tr>
+            <tr>
+                <td>栅格系统</td>
+                <td>
+                    列间距 <code data-id="grid" class="margin"></code> <span class="sub">@variables.scss - Grid system</span>
+                    ，普通行间距 <code data-id="gridrow" class="margin"></code>
+                    ，大行间距<code data-id="gridrowlg" class="margin"></code> <span class="sub">@utilities.scss - Grid system</span>
+                </td>
+            </tr>
+            <!--<tr>
+                <td>media</td>
+                <td>纵向：<code data-id="media-h-v" class="margin"></code>，内容：<code data-id="media-c-v" class="margin"></code></td>
+            </tr>
+            <tr>
+                <td>com <span class="sub">组件间距</span></td>
+                <td>纵向：<code data-id="com" class="margin"></code> <span class="sub">@kostand.scss - Com</span>，横向：<code data-id="grid" class=" margin"></code>（同栅格系统间距）</td>
+            </tr>-->
+            <tr>
+                <td>form</td>
+                <td>纵向：<code data-id="form" class="margin"></code>，横向：<code data-id="grid" class="margin"></code>（同栅格系统间距）</td>
+            </tr>
+        </table>
+        <div class="sub">注：其他间距见相应组件样式</div>
+    </section>
+</div>
 <script>
     $(function () {
         var g = (function getGridValue() {

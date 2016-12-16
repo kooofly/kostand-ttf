@@ -1,174 +1,160 @@
-<section id="table" class="demo">
-    <h1 class="title">
-        <span>表格</span>
-        <span class="sub">Table</span>
-        <!--<span class="sub">表格 <code>td,th</code>留白 <code>10px</code>，同一 <code>th</code>不同内容横向间距 <code>30px</code> 同一 <code>td</code>不同内容横向间距 <code>15px</code></span>-->
-    </h1>
-    <div class="body">
-        <div class="panel">
-            <div class="panel-body">
-                <h4>
-                    <span>Form表格</span>
-                    <span class="sub">table-form</span>
-                </h4>
-                <table class="table table-form">
-                    <colgroup>
-                        <col class="col-2">
-                        <col>
-                        <col class="col-2">
-                        <col>
-                    <colgroup>
-                        <tr>
-                            <th>名称</th>
-                            <td>
-                                <div class="form-group">
-                                    <input class="form-control" type="text"/>
-                                </div>
-                            </td>
-                            <th>时间</th>
-                            <td>
-                                <div class="form-group has-feedback">
-                                    <input type="text" class="form-control" onfocus="WdatePicker()" placeholder="">
-                                    <span class="icon icon-calendar form-control-feedback"></span>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>类型</th>
-                            <td>
-                                <select class="form-control">
-                                    <option value="傻白甜">傻白甜</option>
-                                    <option value="高富帅">高富帅</option>
-                                </select>
-                            </td>
-                            <th>区间</th>
-                            <td>
-                                <div class="form-group has-feedback">
-                                    <div class="input-group input-range">
-                                        <div class="pr">
-                                            <input id="startDate" type="text" class="form-control" name="start" onfocus="WdatePicker({maxDate:'#F{$dp.$D(\'endDate\')}'})" placeholder="开始时间">
-                                            <span class="icon icon-calendar form-control-feedback"></span>
-                                        </div>
-                                        <span class="input-group-addon">-</span>
-                                        <input id="endDate" type="text" class="form-control" name="end" onfocus="WdatePicker({minDate:'#F{$dp.$D(\'startDate\')}',maxDate:'2020-10-01'})" placeholder="结束时间">
+<style type="text/css">
+    #table .ui--box { padding-top: 30px; padding-bottom: 30px; }
+</style>
+<div id="table" class="komod">
+    <h1 class="title">Table 表格</h1>
+    <section class="ui">
+        <div class="ui--box">
+            <table class="table table-form">
+                <colgroup>
+                    <col class="col-2">
+                    <col>
+                    <col class="col-2">
+                    <col>
+                <colgroup>
+                    <tr>
+                        <th data-role="mark" data-mark='["height"]'>名称</th>
+                        <td data-role="mark" data-mark='["padding"]'>
+                            <div class="form-group">
+                                <input class="form-control" type="text"/>
+                            </div>
+                        </td>
+                        <th>时间</th>
+                        <td>
+                            <div class="form-group has-feedback">
+                                <input type="text" class="form-control" onfocus="WdatePicker()" placeholder="">
+                                <span class="icon icon-calendar form-control-feedback"></span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>类型</th>
+                        <td>
+                            <select class="form-control">
+                                <option value="傻白甜">傻白甜</option>
+                                <option value="高富帅">高富帅</option>
+                            </select>
+                        </td>
+                        <th>区间</th>
+                        <td>
+                            <div class="form-group has-feedback">
+                                <div class="input-group input-range">
+                                    <div class="pr">
+                                        <input id="startDate" type="text" class="form-control" name="start" onfocus="WdatePicker({maxDate:'#F{$dp.$D(\'endDate\')}'})" placeholder="开始时间">
                                         <span class="icon icon-calendar form-control-feedback"></span>
                                     </div>
+                                    <span class="input-group-addon">-</span>
+                                    <input id="endDate" type="text" class="form-control" name="end" onfocus="WdatePicker({minDate:'#F{$dp.$D(\'startDate\')}',maxDate:'2020-10-01'})" placeholder="结束时间">
+                                    <span class="icon icon-calendar form-control-feedback"></span>
                                 </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>说明</th>
-                            <td>
-                                <span class="form-control form-control-text">收入 <code>2,345,544.88</code>元&nbsp;&nbsp;支出 <code>1,002,520.66</code>元</span>
-                            </td>
-                            <th>对齐input</th>
-                            <td>
-                                <span class="form-control">收入 <code>2,345,544.88</code>元&nbsp;&nbsp;支出 <code>1,002,520.66</code>元</span>
-                            </td>
-                        </tr>
-                </table>
-                <h4>
-                    <span>数据表格</span>
-                    <span class="sub">table-default</span>
-                </h4>
-                <table class="table table-default table-hover">
-                    <colgroup>
-                        <col>
-                        <col>
-                        <col class="col-2">
-                        <col class="col-3">
-                        <col class="col-5">
-                        <col class="col-2">
-                        <col class="col-4">
-                        <col class="col-4">
-                    </colgroup>
-                    <thead>
-                    <tr>
-                        <th width="33">
-                            <div class="checkbox-inlnie">
-                                <label>
-                                    <input type="checkbox">
-                                </label>
                             </div>
-                        </th>
-                        <th class="text-left">
-                            标题
-                        </th>
-                        <th class="text-center">数量</th>
-                        <th class="text-center">售价（元）</th>
-                        <th class="text-center">身份证</th>
-                        <th class="text-center">日期</th>
-                        <th class="text-center">提示</th>
-                        <th class="text-center">操作</th>
+                        </td>
                     </tr>
-                    </thead>
-
                     <tr>
+                        <th>说明</th>
                         <td>
+                            <span class="form-control form-control-text">收入 <code>2,345.8</code>元&nbsp;&nbsp;支出 <code>902.6</code>元</span>
+                        </td>
+                        <th>对齐input</th>
+                        <td>
+                            <span class="form-control">收入 <code>2,345,544.88</code>元&nbsp;&nbsp;支出 <code>1,002,520.66</code>元</span>
+                        </td>
+                    </tr>
+            </table>
+        </div>
+        <div class="ui--box">
+            <table class="table table-default table-hover">
+                <colgroup>
+                    <col>
+                    <col>
+                    <col class="col-2">
+                    <col class="col-3">
+                    <col class="col-2">
+                    <col class="col-4">
+                    <col class="col-4">
+                </colgroup>
+                <thead>
+                <tr>
+                    <th width="33">
+                        <div class="checkbox-inlnie">
                             <label>
                                 <input type="checkbox">
                             </label>
-                        </td>
-                        <td>
-                            <a href="">我是可以点击的标题</a>
-                        </td>
-                        <td class="text-center vm">2</td>
-                        <td class="text-center vm">
-                            <i class="icon icon-rmb"></i>234
-                            <div class="sub">（含邮费：0.00）</div>
-                        </td>
-                        <td class="text-center vm">3307845587899856247</td>
-                        <td class="text-center vm">
-                            2016-12-12 11:12:20
-                        </td>
-                        <td class="text-center vm">
-                            <div class="text-danger">有错误信息，请检查</div>
-                        </td>
-                        <td class="text-center vm">
-                            <a href="#">查看</a>
-                            <a href="#">删除</a>
-                            <a href="#">编辑</a>
-                        </td>
-                    </tr>
+                        </div>
+                    </th>
+                    <th class="text-left" data-role="mark" data-mark='["padding"]'>
+                        标题
+                    </th>
+                    <th class="text-center">数量</th>
+                    <th class="text-center">售价（元）</th>
+                    <th class="text-center">日期</th>
+                    <th class="text-center">提示</th>
+                    <th class="text-center">操作</th>
+                </tr>
+                </thead>
 
-                    <tr>
-                        <td>
-                            <label>
-                                <input type="checkbox">
-                            </label>
-                        </td>
-                        <td>
-                            <a href="">我是可以点击的链接</a>
-                        </td>
-                        <td class="text-center vm">2</td>
-                        <td class="text-center vm">
-                            <i class="icon icon-rmb"></i>234
-                            <div class="sub">（含邮费：0.00）</div>
-                        </td>
-                        <td class="text-center vm">3307845587899856247</td>
-                        <td class="text-center vm">
-                            2016-12-12 11:12:20
-                        </td>
-                        <td class="text-center vm"><div class="text-danger">有错误信息，请检查</div></td>
-                        <td class="text-center vm">
-                            <a href="#">查看</a>
-                            <a href="#">删除</a>
-                            <a href="#">编辑</a>
-                        </td>
-                    </tr>
+                <tr>
+                    <td>
+                        <label>
+                            <input type="checkbox">
+                        </label>
+                    </td>
+                    <td>
+                        <a href="">我是可以点击的标题</a>
+                    </td>
+                    <td class="text-center vm">2</td>
+                    <td class="text-center vm" data-role="mark" data-mark='["padding"]'>
+                        <i class="icon icon-rmb"></i>234
+                        <div class="sub">（含邮费：0.00）</div>
+                    </td>
+                    <td class="text-center vm">
+                        2016-12-12 11:12:20
+                    </td>
+                    <td class="text-center vm">
+                        <div class="text-danger">有错误信息，请检查</div>
+                    </td>
+                    <td class="text-center vm">
+                        <a href="#">查看</a>
+                        <a href="#">删除</a>
+                        <a href="#">编辑</a>
+                    </td>
+                </tr>
 
-                </table>
-                <h4>
-                    <span>信息表格</span>
-                    <span class="sub">table-detail</span>
-                </h4>
-                <table class="table table-detail table-bordered">
-                    <colgroup>
-                        <col class="col-2">
-                        <col>
-                    <colgroup>
+                <tr>
+                    <td>
+                        <label>
+                            <input type="checkbox">
+                        </label>
+                    </td>
+                    <td>
+                        <a href="">我是可以点击的链接</a>
+                    </td>
+                    <td class="text-center vm">2</td>
+                    <td class="text-center vm">
+                        <i class="icon icon-rmb"></i>234
+                        <div class="sub">（含邮费：0.00）</div>
+                    </td>
+                    <td class="text-center vm">
+                        2016-12-12 11:12:20
+                    </td>
+                    <td class="text-center vm"><div class="text-danger">有错误信息，请检查</div></td>
+                    <td class="text-center vm">
+                        <a href="#">查看</a>
+                        <a href="#">删除</a>
+                        <a href="#">编辑</a>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+        <div class="ui--box">
+            <table class="table table-detail table-bordered">
+                <colgroup>
+                    <col class="col-2">
+                    <col>
+                <colgroup>
                     <tr>
-                        <th>序号</th>
+                        <th data-role="mark" data-mark='["paddingLeft", "paddingRight"]'>一些序号</th>
                         <td>20161212 45678234</td>
                     </tr>
                     <tr>
@@ -181,20 +167,18 @@
                     </tr>
                     <tr>
                         <th class="vt">一些说明</th>
-                        <td>
-                            <p>其实，我只想要个小院。推门见山，屋前良田，种着青菜萝卜。围着竹篱，爬着牵牛或是扁豆。夜里能看到星星，清晨能听见鸟鸣。</p>
-                            <p>其实，我只想要个小院。屋后流水清清，三株两株桃树，石桌藤椅秋千，河里有小鱼戏水，河畔有你在浣衣。每天每天，小猫蹲在石阶上看鱼，我坐在阳光下看你。</p>
+                        <td data-role="mark" data-mark='["paddingLeft", "paddingRight"]'>
+                            <p>其实，我只想要个小院。推门见山，屋前良田，种着青菜萝卜。围着竹篱，爬着牵牛扁豆。夜里能见星星，清晨能闻鸟鸣。</p>
+                            <p class="mb0">其实，我只想要个小院。屋后流水清清，三株两株桃树，石桌藤椅秋千，河里有小鱼戏水，河畔有你在浣衣。每天每天，小猫蹲在石阶上看鱼，我坐在阳光下看你。</p>
                         </td>
                     </tr>
                     <tr>
-                        <th>操作</th>
+                        <th data-role="mark" data-mark='["height"]'>操作</th>
                         <td>
-                            <input class="form-control input-2" type="text"/>
-                            <a class="ml10" href="javascrit:;">点我吓死你</a>
+                            <input class="form-control input-2" type="text"/><a data-role="mark" data-mark='["marginLeft"]' class="ml10" href="javascrit:;">点我吓死你</a>
                         </td>
                     </tr>
-                </table>
-            </div>
+            </table>
         </div>
-    </div>
-</section>
+    </section>
+</div>

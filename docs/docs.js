@@ -67,7 +67,7 @@ function mark (element, markArray) {
         marginBottom: {
             position: 'left',
             callback: function ($el, value, offset) {
-                var v = formatVal(value.marginTop)
+                var v = formatVal(value.marginBottom)
                 $el.css({
                     left: offset.left - markSize,
                     top: offset.top + value.height,
@@ -121,6 +121,17 @@ function mark (element, markArray) {
         }
     }
     $(element).each(function (v, i) {
+        var markAttrs = $(this).data('mark')
+        if (markAttrs) {
+            ma = markAttrs
+        }
+        if (ma.indexOf('padding') !== -1) {
+            ma = ma.concat(['paddingTop', 'paddingRight', 'paddingBottom', 'paddingLeft'])
+        }
+        if (ma.indexOf('margin') !== -1) {
+            ma = ma.concat(['marginTop', 'marginTight', 'marginBottom', 'marginLeft'])
+        }
+
         var $this = $(this)
         var offset = $this.offset()
         var style = {
@@ -135,7 +146,7 @@ function mark (element, markArray) {
             paddingTop: $this.css('padding-top'),
             paddingBottom: $this.css('padding-bottom')
         }
-        console.log($(this).offset(), style)
+
         for (var key in markMap) {
             if (ma.indexOf(key) !== -1) {
                 doMark(key, markMap[key].position, style, offset)
@@ -190,7 +201,9 @@ $(function () {
     })*/
     // XX
     $('.wrap').each(function () {
-        $(this).load($(this).data('url'))
+        $(this).load($(this).data('url'), function () {
+            mark($(this).find('[data-role=mark]'))
+        })
     })
 
     

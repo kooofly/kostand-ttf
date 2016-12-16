@@ -82,14 +82,24 @@
 
 
 
-html,body { height: 100%; font-family: "Microsoft YaHei", sans-serif;
-    background: #fafafa; }
-.container{ background: transparent; max-width: 960px!important; margin: 10px; }
+html,body {
+    height: 100%;
+    font-family: "Microsoft YaHei", sans-serif;
+    /* background: #fafafa; */
+}
+.container{background: transparent;max-width: 960px!important;margin: 10px 0;}
 .margin{ margin-left: 20px; margin-right: 20px; }
 .logo{ font-family: 'Josefin Sans', sans-serif;font-family: 'Quicksand', sans-serif; }
 .sidebar {
     position: fixed;
-    z-index: 1070; background: #fff; left: 0; top: 0; width: 240px; height: 100%; }
+    z-index: 1070;
+    background: #fff;
+    left: 0;
+    top: 0;
+    width: 240px;
+    height: 100%;
+    border-right: 1px solid #ccc;
+}
 .sidebar .logo {
     font-size: 30px;
     border-bottom: 1px solid #EBEBEB;
@@ -120,9 +130,9 @@ td[rowspan] { background: #fff!important; }
 .top-bar .right {
     height: 65px;
 }
-.top-bar .left { border-right: 1px solid #fff; padding: 0 40px; text-align: right; }
+.top-bar .left {border-right: 1px solid #fff;padding: 0 30px;text-align: right;}
 .top-bar .logo { font-size: 24px; }
-.top-bar .right { padding: 0 40px; }
+.top-bar .right {padding: 0 30px;}
 .top-bar .sub { color: #fff; }
 .top-bar .media-left { padding-right: 0; }
 .top-bar .media-body .title { font-size: 24px; font-family: "Microsoft JhengHei Light"; margin-top: -4px; }
@@ -157,9 +167,10 @@ td[rowspan] { background: #fff!important; }
 
 
 .komod{ background: #fff; overflow: hidden; padding: 20px; }
-.komod .title{ font-weight: 400; font-size: 20px; margin: 0; margin-bottom: 20px; }
-.komod .ui{ background: #f4f4f4; overflow: hidden; margin-bottom: 20px; }
-.komod .ui .ui--box{ margin: 60px; text-align: center; }
+.komod .title{ font-weight: 400; font-size: 24px; margin: 0; margin-bottom: 20px; }
+.komod .ui{overflow: hidden;margin-bottom: 20px;}
+.komod .ui .ui--box{padding: 60px; background: #f4f4f4;}
+.komod .ui .table{ margin-bottom: 0; }
 .komod .example { position: relative; padding: 50px 15px 15px;border: 1px solid #dedede;}
 .komod .example:after,
 .komod .api:after{position: absolute;top: 15px;left: 15px;content: '实例';display: block;font-size: 12px;font-weight: 700;color: #999;}
