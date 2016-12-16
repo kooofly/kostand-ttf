@@ -137,7 +137,7 @@ td[rowspan] { background: #fff!important; }
 .top-bar .media-body .title { font-size: 24px; font-family: "Microsoft JhengHei Light"; margin-top: -4px; }
 
 .quotation { margin-top: 20px; margin-left: -15px; margin-right: -15px; background: #FFFBE0; padding: 20px; }
-
+.table { background: #fff; }
 .komod{ background: #fff; overflow: hidden; padding: 20px; }
 .komod .title{ font-weight: 400; font-size: 24px; margin: 0; margin-bottom: 20px; }
 .komod .ui{overflow: hidden;margin-bottom: 20px;}
