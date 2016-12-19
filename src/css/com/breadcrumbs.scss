@@ -1,0 +1,37 @@
+//
+// Breadcrumbs
+// --------------------------------------------------
+
+
+.breadcrumb {
+  padding: 0;
+  margin: 15px 0;
+  list-style: none;
+  border-radius: $border-radius-base;
+  font-weight: 700;
+  > .local {
+    color: #999;
+    + li:before {
+      content: '';
+    }
+  }
+  > li {
+    display: inline-block;
+
+    > a { color: $breadcrumb-color; }
+
+    + li:before {
+      // [converter] Workaround for https://github.com/sass/libsass/issues/1115
+      $nbsp: "\00a0";
+      content: "#{$breadcrumb-separator}#{$nbsp}"; // Unicode space added since inline-block means non-collapsing white-space
+      padding-left: 5px;
+      color: $breadcrumb-color;
+      font-family: SimSun;
+    }
+  }
+}
+
+
+
+// WEBPACK FOOTER //
+// webpack:///src/css/~/.3.3.7@bootstrap-sass/assets/stylesheets/bootstrap/_breadcrumbs.scss
