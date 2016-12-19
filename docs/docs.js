@@ -221,10 +221,16 @@ $(function () {
         })
     })*/
     // XX
-    $('.wrap').each(function () {
+    var $modules = $('.wrap')
+    var l = $modules.length
+    var moduleReadyCount = 0
+    $modules.each(function () {
         $(this).load($(this).data('url'), function () {
-            mark($(this).find('[data-role=mark]'))
-
+            moduleReadyCount ++
+            console.log(moduleReadyCount, l)
+            if (moduleReadyCount === l) {
+                mark($modules.find('[data-role=mark]'))
+            }
             $('[data-role="select2"]').select2({
                 minimumResultsForSearch: Infinity,
                 templateResult: function (state, i) {
