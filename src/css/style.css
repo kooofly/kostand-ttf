@@ -1,6 +1,0 @@
-.form-control{ width: 300px; }
-.select2-container--default .select2-selection--single{ border: 1px solid #d7d7d7; border-radius: 0; height: 30px; }
-.select2-dropdown{ border-radius: 0; }
-.select2-container--default .select2-results__option[aria-selected=true]{ background: #fff; color: #333; }
-.select2-container--default .select2-results__option--highlighted[aria-selected]{ background: #5897fb; color: #fff; }
-.select2-container--default .select2-selection--single .select2-selection__arrow{ height: 28px; border-left: 1px solid #d7d7d7; width: 28px; }

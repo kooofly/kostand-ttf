@@ -38,6 +38,10 @@ module.exports = {
             {
                 test: /\.(svg|eot|ttf|woff|woff2)$/,
                 loader: 'url?limit=10000name=[path][name].[ext]?[hash:8]&context=font'
+            },
+            {
+                test: /\.(gif|png)$/,
+                loader: 'url?limit=10000name=[path][name].[ext]?[hash:8]&context=images'
             }
         ]
     },

@@ -52,12 +52,13 @@ require("./assets/linkage")
 require("./assets/zclip")
 require("./assets/dialogselector")*/
 
-var _ = require('lodash')
-var ev = require('./src/script/event')
 var Page = require('./src/script/page')
 var Form = require('./src/script/form')
-window._ = _
-window.ev = ev
+
 window.Page = Page
 window.Form = Form
+/*window.layer = require('./src/modules/layer/layer')*/
+/*require('./src/modules/select2-4.0.3/js/select2')*/
+
 require('./src/css/theme.scss')
+
