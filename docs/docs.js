@@ -227,8 +227,8 @@ $(function () {
     $modules.each(function () {
         $(this).load($(this).data('url'), function () {
             moduleReadyCount ++
-            console.log(moduleReadyCount, l)
             if (moduleReadyCount === l) {
+                console.info('all ready')
                 mark($modules.find('[data-role=mark]'))
             }
             $('[data-role="select2"]').select2({
