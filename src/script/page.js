@@ -6,10 +6,11 @@
 * 公共数据存储 cookie || localstorage
 * */
 var _ = require('lodash')
+var event = require('./event')
 function Page (options) {
     var self  = this
     this.settings = $.extend({}, Page.settings)
-    this.module = {}
+    this.modules = {}
     this.info = {}
     $(function () {
         self.init(options)
@@ -19,6 +20,7 @@ function Page (options) {
 Page.settings = {
     getPageInfo: true
 }
+
 // 设置页面
 Page.sets = function (options) {
     $.extend(this.settings, options)
@@ -38,13 +40,14 @@ Page.prototype = {
         var self = this
         _.forEach(modules, function (v, i) {
             if (_.isFunction(v)) {
-                self.module[i] = v.call(this)
+                self.modules[i] = v.call(this)
             } else if (_.isObject(v)){
                 _.forIn(function (v, k) {
-                    self.module[k] = v
+                    self.modules[k] = v
                 })
             }
         })
+        Page.modules = self.modules
     },
     _getPageInfo: function () {
         var self = this
@@ -77,5 +80,18 @@ Page.start = function (modules) {
         modules: modules
     })
 }
+
+Page.data = {}
+Page.get = function (key) {
+    return Page.data[key]
+}
+Page.on = event.on
+Page.emit = event.emit
+Page.set = function (key, val) {
+    Page.data[key] = val
+    Page.emit(key + ':change', val)
+}
+
+
 Page.ajax = $.ajax
 module.exports = Page

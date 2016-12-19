@@ -58,5 +58,6 @@ var Page = require('./src/script/page')
 var Form = require('./src/script/form')
 window._ = _
 window.ev = ev
-
+window.Page = Page
+window.Form = Form
 require('./src/css/theme.scss')

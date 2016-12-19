@@ -99,7 +99,7 @@ Form.prototype = $.extend({}, event, {
     // 设置提交参数
     setRequest: function () {
         var self = this
-        var modelKey = this.option.key
+        var modelKey = this.options.key
         var elements = {}
         var type
         this.$form.find('[' + modelKey + '=' + name + ']').each(function (i, v) {
@@ -141,18 +141,18 @@ Form.prototype = $.extend({}, event, {
     },
     // 获取提交参数
     getRequest: function (key) {
-        var modelKey = this.option.modelKey
-        var $target = this.$element.find('[' + modelKey +'=' + key +']')
+        var modelKey = this.options.key
+        var $target = this.$form.find('[' + modelKey +'=' + key +']')
         return this.getSingleData($target)
     },
     // 获取所有数据
     getAllData: function () {
         var self = this
-        var modelKey = this.option.modelKey
+        var modelKey = this.options.key
         var result = {}
 
-        var $form = this.$element
-        this.$element.find('[' + modelKey + ']').each(function (i ,v) {
+        var $form = this.$form
+        this.$form.find('[' + modelKey + ']').each(function (i ,v) {
             var nameSpace
             var $item = $(v)
             var name = $item.attr(modelKey)
@@ -203,7 +203,7 @@ Form.prototype = $.extend({}, event, {
     },
     // 获取单个数据
     getSingleData: function ($item) {
-        var modelKey = this.option.modelKey
+        var modelKey = this.options.key
         var name = $item.attr(modelKey)
         var val = $.trim($item.val())
 
@@ -237,7 +237,7 @@ Form.prototype = $.extend({}, event, {
     },
     // 验证 基于 jquery.validate
     valid: function () {
-        var options = $.extend({
+        var options = {
             onkeyup: false,
             onfocusin: false,
             /*onsubmit: true,
@@ -246,7 +246,7 @@ Form.prototype = $.extend({}, event, {
              onkeyup: false,*/
             ignore: '.ignore',
 
-        }, this.option.validOption || {});
+        };
 
         var def = $.Deferred();
         var $form = this.$form;
