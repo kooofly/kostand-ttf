@@ -1,8 +1,8 @@
 {
   "name": "Kostand",
-  "project": "统统付UI规范-Kostand",
+  "project": "kostand",
   "version": "1.0.0",
-  "description": "web project standard generator",
+  "description": "统统付UI规范-Kostand",
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --inline --hot --quiet --port 8091",
