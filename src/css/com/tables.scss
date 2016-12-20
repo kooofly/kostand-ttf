@@ -12,9 +12,6 @@ caption {
   color: $text-muted;
   text-align: left;
 }
-th {
-  text-align: left;
-}
 
 
 // Baseline styles
@@ -24,6 +21,9 @@ th {
   max-width: 100%;
   margin-bottom: $line-height-computed;
   // Cells
+  label {
+    margin-right: 10px;
+  }
   > thead,
   > tbody,
   > tfoot {

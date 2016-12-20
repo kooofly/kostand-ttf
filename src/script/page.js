@@ -5,7 +5,7 @@
 * 当前可视区域宽度、高度
 * 公共数据存储 cookie || localstorage
 * */
-var _ = require('lodash')
+var _ = require('./util')
 var event = require('./event')
 function Page (options) {
     var self  = this

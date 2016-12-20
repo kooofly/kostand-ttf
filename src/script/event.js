@@ -1,4 +1,6 @@
-﻿var _ = require('lodash')
+﻿
+
+var _ = require('./util')
 var _subscriptions = {}
 var eventSplitter = /\s+/
 function getMethod( host, methodName ) {

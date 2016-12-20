@@ -18,6 +18,7 @@
         after
             submit
  */
+var _ = require('./util')
 var event = require('./event')
 var Page = require('./page')
 function Form (options) {

@@ -4,100 +4,112 @@
 <div id="form" class="komod">
     <h1 class="title">Form 表单</h1>
     <section class="ui">
-        <form action="" class="form-horizontal">
+        <form id="form-horizontal" action="form.html" class="form-horizontal">
 
             <div class="ui--box">
-                <div class="form-group">
-                    <label class="col-sm-2 control-label">输入框：</label>
-                    <div class="col-sm-5">
+                <div class="media">
+                    <div class="media-left">
+                        <div class="control-label">输入框：</div>
+                    </div>
+                    <div class="media-body">
                         <input type="text" data-role="mark" data-mark='["padding"]' class="form-control" placeholder="一场大雨，敲开八月浅秋的门窗">
                     </div>
                 </div>
             </div>
             <div class="ui--box">
-                <div class="form-group">
-                    <label class="col-sm-2 control-label">固宽输入框：</label>
-                    <div class="col-sm-5" data-role="mark" data-mark='["paddingLeft"]'>
+                <div class="media">
+                    <div class="media-left" data-role="mark" data-mark='["paddingRight"]'>
+                        <div class="control-label">固宽输入框：</div>
+                    </div>
+                    <div class="media-body">
                         <input type="text" data-role="mark" data-mark='["width"]' class="form-control input-1" placeholder="">
                     </div>
                 </div>
             </div>
             <div class="ui--box">
-                <div class="form-group">
-                    <label class="col-sm-2 control-label"> </label>
-                    <div class="col-sm-9">
+                <div class="media">
+                    <div class="media-left">
+                        <div class="control-label"></div>
+                    </div>
+                    <div class="media-body">
                         <input type="text" data-role="mark" data-mark='["width", "height"]' class="form-control input-2" placeholder="input-2">
                     </div>
                 </div>
             </div>
             <div class="ui--box">
-                <div class="form-group">
-                    <label class="col-sm-2 control-label"> </label>
-                    <div class="col-sm-9">
+                <div class="media">
+                    <div class="media-left">
+                        <div class="control-label"></div>
+                    </div>
+                    <div class="media-body">
                         <input type="text" data-role="mark" data-mark='["width"]' class="form-control input-3" placeholder="input-3">
-
                     </div>
                 </div>
             </div>
             <div class="ui--box">
-                <div class="form-group">
-                    <label class="col-sm-2 control-label"> </label>
-                    <div class="col-sm-9">
+                <div class="media">
+                    <div class="media-left">
+                        <div class="control-label"></div>
+                    </div>
+                    <div class="media-body">
                         <input type="text" data-role="mark" data-mark='["width"]' class="form-control input-4" placeholder="input-4"><span data-role="mark" data-mark='["marginLeft"]' class="mt6 ml10 dib">提示信息</span>
                     </div>
                 </div>
             </div>
             <div class="ui--box">
-                <div class="form-group">
-                    <label class="col-sm-2 control-label"> </label>
-                    <div class="col-sm-9">
+                <div class="media">
+                    <div class="media-left">
+                        <div class="control-label"></div>
+                    </div>
+                    <div class="media-body">
                         <input type="text" data-role="mark" data-mark='["width"]' class="form-control input-5" placeholder="input-5"><a data-role="mark" data-mark='["marginLeft"]' href="javascript:;" class="mt6 ml10 dib">一个操作</a>
                     </div>
                 </div>
             </div>
             <div class="ui--box">
-                <div class="form-group">
-                    <label class="col-sm-2 control-label"> </label>
-                    <div class="col-sm-9">
+                <div class="media">
+                    <div class="media-left">
+                        <div class="control-label"></div>
+                    </div>
+                    <div class="media-body">
                         <input type="text" data-role="mark" data-mark='["width"]' class="form-control input-6" placeholder="input-6">
                         <div class="sub input-6" data-role="mark" data-mark='["marginTop"]'>提示信息：家门口不远处，是一棵不算高的石榴树，邻家的，结满了累累的石榴，只是还带着羞涩，没有成熟。</div>
                     </div>
                 </div>
             </div>
             <div class="ui--box">
-                <div class="form-group has-feedback">
-                    <label class="col-sm-2 control-label">日期选择：</label>
-                    <div class="col-sm-9">
+                <div class="media">
+                    <div class="media-left">
+                        <div class="control-label">日期选择：</div>
+                    </div>
+                    <div class="media-body">
                         <div class="input-group  input-2">
                             <input type="text" class="form-control" onfocus="WdatePicker()" placeholder="">
                             <span data-role="mark" data-mark='["width", "height"]' class="icon icon-calendar form-control-feedback"></span>
                         </div>
-
                     </div>
                 </div>
             </div>
             <div class="ui--box">
-                <div class="form-group">
-                    <label class="col-sm-2 control-label">带单位的输入框：</label>
-                    <div class="col-sm-9">
+                <div class="media">
+                    <div class="media-left">
+                        <div class="control-label">带单位的输入框：</div>
+                    </div>
+                    <div class="media-body">
                         <div class="input-group input-2">
                             <input type="text" class="form-control" value="1,000,300,806">
                             <span class="input-group-addon">元</span>
                         </div>
-
-                        <!--<div class="input-group  input-2">
-                            <input type="text" class="form-control" value="1,000,300,806">
-                            <span data-role="mark" data-mark='["width"]' class="form-control-feedback text-sub">元</span>
-                        </div>-->
-
                     </div>
                 </div>
             </div>
             <div class="ui--box">
-                <div class="form-group has-feedback" data-role="mark" data-mark='["marginBottom"]'>
-                    <label class="col-sm-2 control-label">操作输入框同一行：</label>
-                    <div class="col-sm-5">
-                        <div class="input-group">
+                <div class="media">
+                    <div class="media-left">
+                        <div class="control-label">操作输入框同一行：</div>
+                    </div>
+                    <div class="media-body">
+                        <div class="input-group input-6">
                             <input type="text" class="form-control">
                             <span class="input-group-btn">
                                     <button class="btn btn-hole">搜索</button>
@@ -105,10 +117,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="form-group has-feedback">
-                    <label class="col-sm-2 control-label">日期区间：</label>
-                    <div class="col-sm-7">
-                        <div class="input-group input-range">
+                <div class="media" data-role="mark" data-mark='["marginTop"]'>
+                    <div class="media-left">
+                        <div class="control-label">单选多选：</div>
+                    </div>
+                    <div class="media-body">
+                        <div class="input-group input-range input-6">
                             <div class="pr">
                                 <input id="startDate" type="text" class="form-control" name="start" onfocus="WdatePicker({maxDate:'#F{$dp.$D(\'endDate\')}'})" placeholder="开始时间">
                                 <span class="icon icon-calendar form-control-feedback"></span>
@@ -121,10 +135,11 @@
                 </div>
             </div>
             <div class="ui--box">
-                <div class="form-group">
-                    <label class="col-sm-2 control-label">单选多选：</label>
-
-                    <div class="col-sm-10">
+                <div class="media">
+                    <div class="media-left">
+                        <div class="control-label">单选多选：</div>
+                    </div>
+                    <div class="media-body">
                         <div>
                             <label class="radio-inline">
                                 <input type="radio" name="optionsRadios" value="" checked="">
@@ -150,9 +165,11 @@
             </div>
 
             <div class="ui--box">
-                <div class="form-group">
-                    <label class="col-sm-2 control-label">选择框：</label>
-                    <div class="col-sm-10">
+                <div class="media">
+                    <div class="media-left">
+                        <div class="control-label">选择框：</div>
+                    </div>
+                    <div class="media-body">
                         <select class="form-control input-4" data-role="select2">
                             <option value="傻白甜">傻白甜</option>
                             <option value="高富帅">高富帅</option>
@@ -165,8 +182,37 @@
                     </div>
                 </div>
             </div>
+
+            <div class="ui--box">
+                <div class="media">
+                    <div class="media-left">
+                        <div class="control-label">错误验证：</div>
+                    </div>
+                    <div class="media-body">
+                        <input type="text" class="form-control input-5" name="errorElement" required placeholder="input-5">
+                        <!--<p class="help-block"><i class="icon icon-error"></i>错误提示信息</p>-->
+                    </div>
+                </div>
+            </div>
+            <div class="ui--box">
+                <div class="media has-error">
+                    <div class="media-left">
+                        <div class="control-label"></div>
+                    </div>
+                    <div class="media-body">
+                        <button class="btn btn-primary" data-role="submit">提 交</button>
+                    </div>
+                </div>
+            </div>
         </form>
     </section>
 </div>
 
 <script src="./src/modules/My97DatePicker/WdatePicker.js"></script>
+<script>
+    $(function () {
+        new Form({
+            element: '#form-horizontal'
+        })
+    })
+</script>

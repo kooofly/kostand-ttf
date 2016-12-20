@@ -43,6 +43,12 @@ module.exports = {
                 test: /\.(gif|png)$/,
                 loader: 'url?limit=10000name=[path][name].[ext]?[hash:8]&context=images'
             }
+        ],
+        postLoaders: [
+            {
+                test: /\.js$/,
+                loaders: ['es3ify-loader']
+            }
         ]
     },
     plugins: [

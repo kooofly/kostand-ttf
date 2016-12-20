@@ -1,5 +1,6 @@
 /* bootstrap */
-
+// 解决 IE8 HTMLElement 未定义问题
+window.HTMLElement = window.HTMLElement || window.Element
 
  require('./node_modules/bootstrap-sass/assets/javascripts/bootstrap/alert.js')
 /*require('./node_modules/bootstrap-sass/assets/javascripts/bootstrap/button.js')
@@ -23,10 +24,10 @@ require('./node_modules/bootstrap-sass/assets/javascripts/bootstrap/affix.js')
 require('./node_modules/bootstrap-sass/assets/javascripts/bootstrap/button.js')
 
 /*window.Handlebars = require('./node_modules/handlebars/dist/handlebars.js')
-require("./assets/handlebars.extend.js")
+require("./assets/handlebars.extend.js")*/
 
-require("./node_modules/jquery-validation/dist/jquery.validate.js")
-require("./assets/validate.extend.js")*/
+/*require("./node_modules/jquery-validation/dist/jquery.validate.js")
+require("./src/script/validate.extend.js")*/
 /*
 $.plugs = {}
 window.bootbox = require("bootbox")
@@ -39,7 +40,7 @@ bootbox.setDefaults('locale','zh_CN')
 
 require("./assets/modals")
 require("./assets/util")
-require("./assets/checkall")
+
 require("./assets/app")
 require("./assets/layout")
 
@@ -52,6 +53,7 @@ require("./assets/linkage")
 require("./assets/zclip")
 require("./assets/dialogselector")*/
 
+require("./src/script/checkall")
 var Page = require('./src/script/page')
 var Form = require('./src/script/form')
 
