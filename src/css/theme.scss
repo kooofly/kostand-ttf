@@ -46,7 +46,7 @@
 @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/code";
 @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/grid";
 @import "./com/tables";
-/*@import '../modules/select2-4.0.3/css/select2.css';*/
+@import '../modules/select2-4.0.3/css/select2.css';
 @import "./com/forms";
 @import "./com/buttons";
 /*@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/tables";*/
@@ -94,7 +94,7 @@
 
 @import "./com/reset";
 @import "./com/layout";
-/*@import "../modules/layer/skin/default/layer.css";*/
+@import "../modules/layer/skin/default/layer.css";
 /*@import "./com/modal";
 @import "./com/status";
 @import "./com/a";*/

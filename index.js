@@ -26,8 +26,7 @@ require('./node_modules/bootstrap-sass/assets/javascripts/bootstrap/button.js')
 /*window.Handlebars = require('./node_modules/handlebars/dist/handlebars.js')
 require("./assets/handlebars.extend.js")*/
 
-/*require("./node_modules/jquery-validation/dist/jquery.validate.js")
-require("./src/script/validate.extend.js")*/
+
 /*
 $.plugs = {}
 window.bootbox = require("bootbox")
@@ -53,14 +52,15 @@ require("./assets/linkage")
 require("./assets/zclip")
 require("./assets/dialogselector")*/
 
+require("./src/script/validate.extend.js")
 require("./src/script/checkall")
 var Page = require('./src/script/page')
 var Form = require('./src/script/form')
 
 window.Page = Page
 window.Form = Form
-/*window.layer = require('./src/modules/layer/layer')*/
-/*require('./src/modules/select2-4.0.3/js/select2')*/
+window.layer = require('./src/modules/layer/layer')
+require('./src/modules/select2-4.0.3/js/select2')
 
 require('./src/css/theme.scss')
 
