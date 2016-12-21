@@ -685,6 +685,8 @@ input[type="checkbox"] {
 .has-error .input-group-addon{ border: 0; background: none; vertical-align: top; }
 .input-group-addon:last-child{ border-right: 1px solid $color-border-input; }
 .input-group .btn{ border-radius: 0; }
+.input-group .file{ position: absolute; width: 100%; height: 100%; z-index: 10; opacity: 0;filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0); top:0; left: 0; line-height: 30px; }
+
 .ie8 .input-group .btn,
 .ie9 .input-group .btn { line-height: 1.28; }
 .select2-container--default .select2-selection--single{ border: 1px solid #d7d7d7; border-radius: 0; height: 30px; }

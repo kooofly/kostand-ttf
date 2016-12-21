@@ -122,3 +122,17 @@ i{ font-style: normal }
 .row-lg{ margin-bottom: 20px; }
 
 .placeholdersjs{ color: #999; }
+
+//
+// box-help
+// --------------------------------------------------
+.box-help { padding: 20px 15px; border: 1px solid $color-border-tips; }
+.box-help .icon{ font-size: 30px; }
+.box-help .icon-info{ color: #51a8ff; }
+
+//
+// box-message
+// --------------------------------------------------
+.box-message{ color: $gray-light; padding-top: 10px; margin-left: 2px; margin-right: 2px; border-top: 1px solid $color-border-panel; }
+.box-message ol{ padding-left: 14px; }
+.box-message ol li{ margin-bottom: 10px; }

@@ -1,3 +1,4 @@
+.theme-blue .header{ background: #fff; }
 .theme-blue .header .container { position: relative; }
 .theme-blue .header .right{ position: absolute; display: inline-block; right: 0; bottom: 14px; font-size: 0; }
 .theme-blue .header .right * { font-size: 12px; }
@@ -7,7 +8,8 @@
 .theme-blue .nav{ background: $color-bg-nav; line-height: 1; }
 .theme-blue .nav .container { margin-bottom: 0; font-size: 0; }
 .theme-blue .nav .container li{ position: relative; display: inline-block; margin-right: 4px; }
-.theme-blue .nav .container li a{ font-size: 14px; display: inline-block; padding: 9px 10px; color: #fff; }
+.theme-blue .nav .container li a{ font-size: 14px; display: block; padding: 9px 10px; color: #fff; }
+.theme-blue .nav .container li .children li { display: block; }
 .theme-blue .nav .container li:hover a { text-decoration: none; background: $color-bg-nav-hover; }
 .theme-blue .nav .container li.active a{ background: $color-bg-nav-hover; }
 .theme-blue .nav .container li .children{
@@ -17,13 +19,13 @@
   padding: 0;
   display: none;
   font-size: 14px;
-  background: $color-bg-nav-hover; }
+  background: $color-bg-nav-hover; z-index: 1000; }
 
 .theme-blue .nav .container li:hover .children{ display: block; }
 .theme-blue .nav .container li .children a{ white-space: pre; }
 .theme-blue .nav .container li .children li { margin: 0; }
 .theme-blue .nav .container li .children a:hover{ background: $color-bg-nav; }
-
+.theme-blue .bd{ background: #fff; padding-bottom: 20px; }
 .theme-blue .aside,
 .theme-blue .main{ float: left; }
 .theme-blue .aside{ width: 180px; margin-top: 20px; }
@@ -37,8 +39,10 @@
 .theme-blue .aside .inner .active:before{ border-left-color: #fff; }
 .theme-blue .main{ width: 800px; margin-top: 20px; margin-left: 20px; }
 .theme-blue .panel-main { margin-bottom: 0; }
-.theme-blue .panel-main .panel-body{ min-height: 800px; }
-.theme-blue .footer{ margin-top: 20px; background: #f3f3f3; border-top: #dedede 1px solid; text-align: center; }
+.theme-blue .panel-main .panel-body{ min-height: 460px; }
+.theme-blue,
+.theme-blue .footer{ background: #f3f3f3; }
+.theme-blue .footer{ border-top: #dedede 1px solid; text-align: center; }
 .theme-blue .footer .container{ padding: 20px 0; background: #f3f3f3; border-top: #dedede 1px solid; margin-top: -1px; }
 .theme-blue .footer .links{ font-size: 0; margin-bottom: 10px; }
 .theme-blue .footer .links * { font-size: 12px; color: #666; }

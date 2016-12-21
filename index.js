@@ -54,13 +54,14 @@ require("./assets/dialogselector")*/
 
 require("./src/script/validate.extend.js")
 require("./src/script/checkall")
+require("./src/script/select2autoinit")
 var Page = require('./src/script/page')
 var Form = require('./src/script/form')
 
 window.Page = Page
 window.Form = Form
 window.layer = require('./src/modules/layer/layer')
-require('./src/modules/select2-4.0.3/js/select2')
+/*require('./src/modules/select2-4.0.3/js/select2')*/
 
 require('./src/css/theme.scss')
 
