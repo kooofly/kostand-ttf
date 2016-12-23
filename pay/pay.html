@@ -24,48 +24,53 @@
     </div>
     <table class="keyboard">
         <tr>
-            <td class="key">1</td>
-            <td class="key">2</td>
-            <td class="key">3</td>
-            <td class="key"><img src="k-delete.png"></td>
+            <td class="key" name="key">1</td>
+            <td class="key" name="key">2</td>
+            <td class="key" name="key">3</td>
+            <td class="key" name="key"><img src="k-delete.png"></td>
         </tr>
         <tr>
-            <td class="key">4</td>
-            <td class="key">5</td>
-            <td class="key">6</td>
-            <td class="key c">C</td>
+            <td class="key" name="key">4</td>
+            <td class="key" name="key">5</td>
+            <td class="key" name="key">6</td>
+            <td class="key c" name="key">C</td>
         </tr>
         <tr>
-            <td class="key">7</td>
-            <td class="key">8</td>
-            <td class="key">9</td>
-            <td class="pay key" rowspan="2">付款</td>
+            <td class="key" name="key">7</td>
+            <td class="key" name="key">8</td>
+            <td class="key" name="key">9</td>
+            <td class="pay key" name="key" rowspan="2">付款</td>
         </tr>
         <tr>
-            <td class="key">.</td>
-            <td class="key">0</td>
-            <td class="key">00</td>
+            <td class="key" name="key">.</td>
+            <td class="key" name="key">0</td>
+            <td class="key" name="key">00</td>
         </tr>
     </table>
 </div>
 <script src="hammer.js"></script>
 <script>
     function pay (v) {
-        // TODO 付款 逻辑
-        console.log('付款:', v)
+        if (!v) {
+            alert('请输入金额')
+        } else{
+            // TODO 付款 逻辑
+            console.log('付款:', v)
+        }
     }
-    function $$(selector) {
-        return document.querySelectorAll(selector)
+    function $key() {
+        return !document.querySelectorAll ? document.getElementsByName('key') : document.querySelectorAll('.key')
     }
-    function $(selector) {
-        return document.querySelector(selector)
+    function $pay() {
+        return !document.querySelector ? document.getElementById('pay') : document.querySelector('#pay')
     }
-    var elements = $$('.key')
-    elements.forEach(function (el, i) {
+    var elements = $key()
+    for (var i = 0, l = elements.length; i < l; i++) {
+        var el = elements[i];
         var mc = new Hammer.Manager(el);
         mc.add( new Hammer.Tap({ event: 'singletap' }) );
         mc.on("singletap", function(ev) {
-            var v = $('#pay').value
+            var v = $pay().value
             var innerText = ev.target.innerText
             if (innerText) {
                 if (innerText === '付款') {
@@ -75,21 +80,20 @@
                     pay(v)
                 } else if (innerText === 'C') {
                     // 清空
-                    $('#pay').value = ''
+                    $pay().value = ''
                 } else if (innerText === '.') {
                     if (!/\./.test(v)) {
-                        $('#pay').value += innerText
+                        $pay().value += innerText
                     }
                 } else {
-                    $('#pay').value += innerText
+                    $pay().value += innerText
                 }
             } else {
                 // 删除
-                $('#pay').value = v.substring(0, v.length - 1)
+                $pay().value = v.substring(0, v.length - 1)
             }
         });
-    })
-
+    }
 </script>
 </body>
 </html>
