@@ -65,11 +65,13 @@
         return !document.querySelector ? document.getElementById('pay') : document.querySelector('#pay')
     }
     var elements = $key()
+    alert(elements.length)
     for (var i = 0, l = elements.length; i < l; i++) {
         var el = elements[i];
         var mc = new Hammer.Manager(el);
         mc.add( new Hammer.Tap({ event: 'singletap' }) );
         mc.on("singletap", function(ev) {
+            alert('tap')
             var v = $pay().value
             var innerText = ev.target.innerText
             if (innerText) {
