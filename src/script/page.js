@@ -91,7 +91,7 @@ Page.set = function (key, val) {
     Page.data[key] = val
     Page.emit(key + ':change', val)
 }
-
-
+Page.plugs = {}
+Page.util = _
 Page.ajax = $.ajax
 module.exports = Page

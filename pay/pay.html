@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <title>收营台</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div class="bd">
+    <img class="logo" src="./logo.png" alt="">
+    <div class="text">绿源电动车</div>
+    <div class="input-group">
+        <label>金额（元）</label>
+        <div class="media">
+            <div class="media-left">
+                <span>¥</span>
+            </div>
+            <div class="media-body">
+                <input id="pay" readonly class="form-control" type="text" style="ime-mode:disabled"/>
+            </div>
+        </div>
+    </div>
+    <table class="keyboard">
+        <tr>
+            <td class="key">1</td>
+            <td class="key">2</td>
+            <td class="key">3</td>
+            <td class="key"><img src="k-delete.png"></td>
+        </tr>
+        <tr>
+            <td class="key">4</td>
+            <td class="key">5</td>
+            <td class="key">6</td>
+            <td class="key c">C</td>
+        </tr>
+        <tr>
+            <td class="key">7</td>
+            <td class="key">8</td>
+            <td class="key">9</td>
+            <td class="pay key" rowspan="2">付款</td>
+        </tr>
+        <tr>
+            <td class="key">.</td>
+            <td class="key">0</td>
+            <td class="key">00</td>
+        </tr>
+    </table>
+</div>
+<script src="hammer.js"></script>
+<script>
+    function pay (v) {
+        // TODO 付款 逻辑
+        console.log('付款:', v)
+    }
+    function $$(selector) {
+        return document.querySelectorAll(selector)
+    }
+    function $(selector) {
+        return document.querySelector(selector)
+    }
+    var elements = $$('.key')
+    elements.forEach(function (el, i) {
+        var mc = new Hammer.Manager(el);
+        mc.add( new Hammer.Tap({ event: 'singletap' }) );
+        mc.on("singletap", function(ev) {
+            var v = $('#pay').value
+            var innerText = ev.target.innerText
+            if (innerText) {
+                if (innerText === '付款') {
+                    if (v.substring(v.length - 1, v.length) === '.') {
+                        v = v.substring(0, v.length - 1)
+                    }
+                    pay(v)
+                } else if (innerText === 'C') {
+                    // 清空
+                    $('#pay').value = ''
+                } else if (innerText === '.') {
+                    if (!/\./.test(v)) {
+                        $('#pay').value += innerText
+                    }
+                } else {
+                    $('#pay').value += innerText
+                }
+            } else {
+                // 删除
+                $('#pay').value = v.substring(0, v.length - 1)
+            }
+        });
+    })
+
+</script>
+</body>
+</html>

@@ -231,22 +231,7 @@ $(function () {
                 console.info('all ready')
                 mark($modules.find('[data-role=mark]'))
             }
-            $('[data-role="select2"]').select2({
-                minimumResultsForSearch: Infinity,
-                templateResult: function (state, i) {
-                    var $state;
-                    if (!state.id) { return state.text; }
-                    if (state.element.index % 2) {
-                        $state = $('<span class="even">' + state.text + '</span>');
-                    } else {
-                        $state = $('<span class="odd">' + state.text + '</span>');
-                    }
-
-                    return $state;
-
-                }
-            })
-
+            Page.plugs.select2AutoInit()
         })
     })
 })

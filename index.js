@@ -48,19 +48,28 @@ require("./assets/search")
 require("./assets/searchSystem")
 require("./assets/status")
 require("./assets/pagination")
-require("./assets/linkage")
+
 require("./assets/zclip")
 require("./assets/dialogselector")*/
 
 require("./src/script/validate.extend.js")
 require("./src/script/checkall")
-require("./src/script/select2autoinit")
+var select2AutoInit = require("./src/script/select2autoinit")
+
 var Page = require('./src/script/page')
 var Form = require('./src/script/form')
+var Linkage = require("./src/script/linkage")
+var layer = require('./src/modules/layer/layer')
+
+Page.plugs.Linkage = Linkage
+Page.plugs.Form = Form
+Page.plugs.layer = layer
+Page.plugs.select2AutoInit = select2AutoInit
 
 window.Page = Page
 window.Form = Form
-window.layer = require('./src/modules/layer/layer')
+window.layer = layer
+
 /*require('./src/modules/select2-4.0.3/js/select2')*/
 
 require('./src/css/theme.scss')
