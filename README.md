@@ -5,3 +5,6 @@ TODO
  all example
  Page.ajax
  media form-group
+
+
+<script src="${path}/static/modules/My97DatePicker/WdatePicker.js" type="text/javascript"></script>
