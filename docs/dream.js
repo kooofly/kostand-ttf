@@ -21,10 +21,12 @@ var Project = {
         // AJAX 安全底层配置
         // 数据加密配置
         // TOKEN
+        // 待测试备注 改动生成影响页面组件日志，生成JSON文件 通过git hook 方式生成待测试通知
     },
     pages: ['index', 'about', 'list', 'detail', '...'],
     modules: {
         framework: {
+            template: 'html.html',
             modules: [
                 'header',
                 'nav',
@@ -33,11 +35,18 @@ var Project = {
             ]
         },
         index: {
+            template: 'index.html',
             combine: 'framework.placeholder',
             modules: [
                 [{widget: 'panel.default._1', grid: 'auto'}, {widget: 'panel.default._2', grid: 'auto'}],
                 [{widget: 'panel.danger._3'}]
-            ]
+            ],
+            beforeModulesRender: function (modules) {
+
+            },
+            afterModulesRender: function (modules) {
+
+            }
         },
         'panel.default': {
             options: {
@@ -47,7 +56,9 @@ var Project = {
         },
         'panel._1': {
             options: {
-                title: 'xxxx'
+                title: 'xxxx',
+                wrapper: '',
+                className: '',
             },
             modules: [
                 ['table._1', 'table._2'],

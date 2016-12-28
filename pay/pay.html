@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-    <title>收营台</title>
+    <title>收银台</title>
     <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-<div class="bd">
+<div id="bd" class="bd">
     <img class="logo" src="./logo.png" alt="">
     <div class="text">绿源电动车</div>
     <div class="input-group">
@@ -48,11 +48,21 @@
         </tr>
     </table>
 </div>
+<div id="toast" class="toast out"></div>
 <script src="hammer.js"></script>
 <script>
+    function toast (message) {
+        var toast = !document.querySelector ? document.getElementById('toast') : document.querySelector('#toast')
+        toast.innerHTML = message
+        toast.style.marginLeft = -toast.offsetWidth / 2 + 'px'
+        toast.className = 'toast in'
+        setTimeout(function () {
+            toast.className = 'toast out'
+        }, 2000)
+    }
     function pay (v) {
         if (!v) {
-            alert('请输入金额')
+            toast('请输入金额')
         } else{
             // TODO 付款 逻辑
             alert('付款:' + v)
