@@ -47,7 +47,7 @@
           window.weex.init({
               appId: location.href
               , loader: loader
-              , source: /weex-bootstrap/.test(page) ? page : '/kostand-ttf/ttf' + page
+              , source: /weex-bootstrap|life\.js|app\.js|merchant\.js/.test(page) ? page : '/kostand-ttf/ttf' + page
               , rootId: 'weex'
           })
       })();
