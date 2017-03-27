@@ -1,0 +1,16 @@
+{
+  "code": 0,
+  "data": {
+    "weex": [
+      {
+        "createtime": "2017-03-01 11:44:33",
+        "desc": "sss",
+        "fun": "openURL",
+        "id": "1",
+        "name": "myModule",
+        "param": [{"require":"true","children":[],"name":"ABC","description":"ABC","defaultValue":""},{"require":"true","children":[],"name":"B","description":"B","defaultValue":""}],
+        "status": "ENABLE"
+      }
+    ]
+  }
+}

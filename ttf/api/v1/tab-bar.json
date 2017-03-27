@@ -1,0 +1,42 @@
+[
+  {
+    "index": 0,
+    "title": "精选",
+    "titleColor": "#8c8c8c",
+    "icon": "icon/home_selected@2x.png",
+    "image": "icon/home_unselected@2x.png",
+    "selectedImage": "icon/home_selected@2x.png",
+    "src": "views/apps.js",
+    "visibility": "visible"
+  },
+  {
+    "index": 1,
+    "title": "生活",
+    "titleColor": "#8c8c8c",
+    "icon": "icon/life_unselected@2x.png",
+    "image": "icon/life_unselected@2x.png",
+    "selectedImage": "icon/life_selected@2x.png",
+    "src": "views/life.js",
+    "visibility": "hidden"
+  },
+  {
+    "index": 2,
+    "title": "卡管家",
+    "titleColor": "#8c8c8c",
+    "icon": "icon/card_unselected@2x.png",
+    "image": "icon/card_unselected@2x.png",
+    "selectedImage": "icon/card_selected@2x.png",
+    "src": "views/dashboard.js",
+    "visibility": "hidden"
+  },
+  {
+    "index": 3,
+    "title": "我的",
+    "titleColor": "#8c8c8c",
+    "icon": "icon/mine_unselected@2x.png",
+    "image": "icon/mine_unselected@2x.png",
+    "selectedImage": "icon/mine_selected@2x.png",
+    "src": "views/merchant.js",
+    "visibility": "hidden"
+  }
+]

@@ -1,0 +1,13 @@
+[
+  { "icon": "icon/phone_replenishing@2x.png", "url": "payment_phone", "text": "手机充值", "group": "便民服务" },
+  { "icon": "icon/refueling_card@2x.png", "url": "payment_petroleum", "text": "加油卡充值", "group": "便民服务" },
+  { "icon": "icon/water@2x.png", "url": "payment_water", "text": "水费缴纳", "group": "便民服务" },
+  { "icon": "icon/electricity@2x.png", "url": "payment_electricity", "text": "电费缴纳", "group": "便民服务" },
+  { "icon": "icon/gas@2x.png", "url": "payment_gas", "text": "燃气缴费", "group": "便民服务" },
+  { "icon": "icon/account_recharge@2x.png", "url": "dashboard_recharge", "text": "账户充值", "group": "账户管理" },
+  { "icon": "icon/account_transfer@2x.png", "url": "dashboard_transfer", "text": "账户转账", "group": "账户管理" },
+  { "icon": "icon/balance_inquire@2x.png", "url": "sumpay_card_balance", "text": "卡余额查询" },
+  { "icon": "icon/password_change@2x.png", "url": "sumpay_card_password", "text": "卡密码修改" },
+  { "icon": "icon/detail@2x.png", "url": "sumpay_card_detail", "text": "卡明细查询" },
+  { "icon": "icon/collection@2x.png", "url": "merchant_collection", "text": "商户收藏", "group": "商户查询" }
+]

@@ -1,0 +1,13 @@
+[
+  { "logo": "icon/phone_replenishing@2x.png", "id": 1, "title": "鲈鱼文旦点", "group": "餐饮美食", "address": "万塘路96号", "distance": "222m", "score": 5 },
+  { "logo": "icon/refueling_card@2x.png", "id": 2, "title": "弄堂里文三店", "group": "便利连锁", "address": "学院路196号", "distance": "2212m", "score": 6 },
+  { "logo": "icon/water@2x.png", "id": 3, "title": "未签拉面", "group": "商超百货", "distance": "1257m", "score": 5 },
+  { "logo": "icon/electricity@2x.png", "id": 4, "title": "百货百货超超超市", "group": "商超百货", "address": "紫荆港路946号", "distance": "592m", "score": 7 },
+  { "logo": "icon/gas@2x.png", "id": 5, "title": "一点点", "group": "便利连锁", "address": "天目山路61号", "distance": "2698m", "score": 8 },
+  { "logo": "icon/account_recharge@2x.png", "id": 6, "title": "宇非凡雨", "group": "餐饮美食", "address": "黄龙时代广场B座34-10号", "distance": "9561m", "score": 9 },
+  { "logo": "icon/account_transfer@2x.png", "id": 7, "title": "余杭百货", "group": "商超百货", "address": "黄龙时代广场B座34号", "distance": "2265m", "score": 10 },
+  { "logo": "icon/account_transfer@2x.png", "id": 8, "title": "乌拉拉小超市", "group": "商超百货", "address": "万塘路116号", "distance": "211m", "score": 1 },
+  { "logo": "icon/phone_replenishing@2x.png", "id": 9, "title": "大润发", "group": "商超百货", "address": "大观花园11号", "distance": "1132m", "score": 2 },
+  { "logo": "icon/electricity@2x.png", "id": 10, "title": "物美超市大观店", "group": "商超百货", "address": "大观花园11号", "distance": "985m", "score": 3 },
+  { "logo": "icon/collection@2x.png", "id": 11, "title": "胖哥俩星光店", "group": "餐饮美食", "address": "星光大道16号", "distance": "656m", "score": 4 }
+]

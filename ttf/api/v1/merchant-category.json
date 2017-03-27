@@ -1,0 +1,14 @@
+[
+  { "icon": "icon/department_store@2x.png", "url": "merchant_list", "text": "商超百货" },
+  { "icon": "icon/convenience_chain@2x.png", "url": "merchant_list", "text": "便利连锁" },
+  { "icon": "icon/restaurant@2x.png", "url": "merchant_list", "text": "餐饮美食" },
+  { "icon": "icon/life_service@2x.png", "url": "merchant_list", "text": "生活服务" },
+  { "icon": "icon/entertainment@2x.png", "url": "merchant_list", "text": "休闲娱乐" },
+  { "icon": "icon/fitness_beauty@2x.png", "url": "merchant_list", "text": "健身美容" },
+  { "icon": "icon/turisthotellet@2x.png", "url": "merchant_list", "text": "旅游酒店" },
+  { "icon": "icon/financial_insurance@2x.png", "url": "merchant_list", "text": "金融保险" },
+  { "icon": "icon/financial_insurance@2x.png", "url": "merchant_list", "text": "服饰鞋包" },
+  { "icon": "icon/financial_insurance@2x.png", "url": "merchant_list", "text": "黄金珠宝" },
+  { "icon": "icon/financial_insurance@2x.png", "url": "merchant_list", "text": "家电数码" },
+  { "icon": "icon/financial_insurance@2x.png", "url": "merchant_list", "text": "特色专卖" }
+]
